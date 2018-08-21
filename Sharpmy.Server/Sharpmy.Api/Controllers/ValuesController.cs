@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Sharpmy.Service.services;
 
 namespace Sharpmy.Api.Controllers
 {
@@ -11,9 +13,12 @@ namespace Sharpmy.Api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var service = new MusicService();
+            service.CatalogAsync();
+
+            return Json(service.Musics);
         }
 
         // GET api/values/5

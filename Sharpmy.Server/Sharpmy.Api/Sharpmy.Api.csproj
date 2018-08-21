@@ -9,11 +9,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ID3.Files-DotNetCore" Version="0.4.0.13" />
+    <PackageReference Include="ID3.Net-DotNetCore" Version="0.4.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sharpmy.Domain\Sharpmy.Domain.csproj" />
+    <ProjectReference Include="..\Sharpmy.Service\Sharpmy.Service.csproj" />
   </ItemGroup>
 
 </Project>
